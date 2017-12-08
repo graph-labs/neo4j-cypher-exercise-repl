@@ -3,15 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>net.biville.florent.devoxx-fr-2017</groupId>
-        <artifactId>hands-on-neo4j-parent</artifactId>
+        <groupId>fr.graphlabs.neo4j</groupId>
+        <artifactId>neo4j-cypher-repl-framework-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>neo4j-repl</artifactId>
+    <artifactId>neo4j-cypher-repl-framework</artifactId>
     <packaging>jar</packaging>
 
-    <name>Devoxx France 2017: Neo4j REPL</name>
+    <name>Neo4j Cypher Workshop Framework</name>
 
     <properties>
         <antlr.version>4.6</antlr.version>
@@ -20,6 +20,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.72</version>
+        </dependency>
+        <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4</artifactId>
             <version>${antlr.version}</version>
@@ -27,7 +32,7 @@
         <dependency>
             <groupId>org.jline</groupId>
             <artifactId>jline</artifactId>
-            <version>3.2.0</version>
+            <version>3.5.1</version>
         </dependency>
         <dependency>
             <groupId>org.neo4j.driver</groupId>

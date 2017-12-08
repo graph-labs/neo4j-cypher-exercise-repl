@@ -1,4 +1,4 @@
-# Devoxx France 2017 - Neo4j Lab Exercise Generator
+# Neo4j Cypher Exercise Generator
 
 ## Build
 
@@ -10,14 +10,14 @@
 
 ### Command
 ```
- $> mvn exec:java -Dexec.mainClass="net.biville.florent.repl.generator.Main" \
+ $> mvn exec:java -Dexec.mainClass="fr.graphlabs.neo4j.repl.generator.Main" \
     -Dexec.args="-o dump.cypher -i /path/to/descriptor.json -u neo4j -p "
 Neo4j password: (password prompt)
 ```
 
 This will output a Cypher file called `output.cypher` in the current directory.
 
-This file, in turn, can replace the one versioned [here](../workshop/src/main/resources/exercises/dump.cypher).
+This file, in turn, can replace the one versioned in your workshop project's classpath.
 
 Finally, the file, once in the classpath, will be parsed and executed by the REPL application at startup in order to import the exercises.
 

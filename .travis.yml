@@ -8,6 +8,7 @@ jdk:
 os:
   - linux
 before_script:
+install:
+  - mvn install -DskipTests=true -B -V -t etc/toolchains.xml
 script: mvn clean package
-install: true
 
